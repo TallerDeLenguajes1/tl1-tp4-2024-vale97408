@@ -48,8 +48,10 @@ void eliminarPrimerNodo(Nodo **L);
 
 //------PROGRAMA PRINCIPAL------
 int main(){
+
+    printf("\n ============MODULO TO-DO===================\n");
     int id = 1000; // Incremetal a usar del id  
-    int opcion; // eleccion por el usuario
+    int eleccion; // eleccion por el usuario
     srand(time(NULL)); // Semilla para el generador de numeros aleatorios
 
     // Creamos las dos listas solicitadas
@@ -59,8 +61,9 @@ int main(){
 
      // Menu para el usuario de la operacion a realizar
     do
-    {
-        printf("\n---------OPERACION A REALIZAR------------\n");
+    { 
+       
+        printf("\n >>>>>>>>>>>OPERACIONES A REALIZAR<<<<<<<<<\n");
         printf("\n---1) Agregar una nueva tarea.\n");
         printf("---2) Transferir tareas de Pendientes a Realizadas. \n");
         printf("---3) Lista de Tareas Pendientes. \n");
@@ -69,13 +72,13 @@ int main(){
         printf("---6) Busqueda de tarea por id.\n");
         
         printf("---7) Salir. \n");
-        printf("----- Opcion selecccionada: \n");
+        printf("----- RESPUESTA: \n");
 
-        scanf("%d", &opcion);
+        scanf("%d", &eleccion);
 
         // Segun la opcion elegida...
 
-        switch (opcion)
+        switch (eleccion)
         {
         case 1:
             printf("\n-----AGREGADO DE TAREAS\n");
@@ -106,7 +109,7 @@ int main(){
         default:
             break;
         }
-    } while (opcion != 7); // Itera hasta que el usuario haya seleccionado la opcion de salir 
+    } while (eleccion != 7); // Itera hasta que el usuario haya seleccionado la opcion de salir 
 
    // Mientras la lista de pendientes no este vacia, elimina nodos y el contenido de las tareas de las listas
 
